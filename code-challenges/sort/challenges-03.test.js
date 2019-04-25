@@ -1,5 +1,16 @@
 'use strict';
 
+//Compare function
+const compare = (a, b) => {
+  if(a < b){
+    return -1;
+  } else if (a === b){
+    return 0;
+  } else{
+    return 1;
+  }
+};
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
 
@@ -46,13 +57,7 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 
 const alphabetizeBetter = (arr) => {
   arr.sort((a,b) => {
-    if(a.toUpperCase() < b.toUpperCase()){
-      return -1;
-    } else if (a.toUpperCase() === b.toUpperCase()){
-      return 0;
-    } else{
-      return 1;
-    }
+    return compare(a.toUpperCase(), b.toUpperCase());
   });
   return arr;
 };
@@ -72,13 +77,7 @@ Here is an example of the input:
 
 const sortByPrice = (arr) => {
   arr.sort((a,b) => {
-    if(a.price < b.price){
-      return -1;
-    } else if (a.price === b.price){
-      return 0;
-    } else{
-      return 1;
-    }
+    return a.price - b.price;
   });
   return arr;
 };
@@ -116,13 +115,7 @@ const people = [
 
 const sortPeople = (arr) => {
   arr.sort((a,b) => {
-    if(a.lastName < b.lastName){
-      return -1;
-    } else if (a.lastName === b.lastName){
-      return 0;
-    } else{
-      return 1;
-    }
+    return compare(a.lastName, b.lastName);
   });
   return arr;
 };
@@ -136,16 +129,7 @@ If two people share the same last name, alphabetize on their first name.
 
 If two people have the same full name, the younger one should come first. Do not worry about capitalization.
 ------------------------------------------------------------------------------------------------ */
-//Compare function
-const compare = (a, b) => {
-  if(a < b){
-    return -1;
-  } else if (a === b){
-    return 0;
-  } else{
-    return 1;
-  }
-};
+
 
 //Sort people by last name
 const sortPeopleBetter = (arr) => {
@@ -177,12 +161,12 @@ const meetings = [
   new Meeting('Friday', '1200', '1345'),
 ];
 
-// const ORDERED_WEEK = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+const ORDERED_WEEK = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
 
-// const sortMeetingsByDay = (arr) => {
-//   meetings.sort((a,b) => ORDERED_WEEK.indexOf(a) - ORDERED_WEEK.indexOf(b));
-//   return meetings;
-// };
+const sortMeetingsByDay = (arr) => {
+  arr.sort((a,b) => ORDERED_WEEK.indexOf(a.dayOfWeek) - ORDERED_WEEK.indexOf(b.dayOfWeek));
+  return arr;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 10 - Stretch Goal
@@ -193,9 +177,14 @@ Sort the meetings in the order that they start. If two meetings start at the sam
 
 You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 ------------------------------------------------------------------------------------------------ */
-const
+
 const sortSchedule = (arr) => {
-  // Solution code here...
+  arr.sort((a,b) => {
+
+    return ORDERED_WEEK.indexOf(a.dayOfWeek) - ORDERED_WEEK.indexOf(b.dayOfWeek) || compare(a.start, b.start) ||
+    compare(Math.abs(a.end - a.start), Math.abs(b.end - b.start));
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
