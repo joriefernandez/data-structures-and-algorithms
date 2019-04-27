@@ -78,18 +78,10 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
 
-  result.push(recipe.ingredients[0].slice(recipe.ingredients[0].indexOf('G')));
-  result.push(recipe.ingredients[1].slice(9));
-  result.push(recipe.ingredients[2].slice(recipe.ingredients[2].indexOf('b')));
-  result.push(recipe.ingredients[3].slice(recipe.ingredients[3].indexOf('f')));
-  result.push(recipe.ingredients[4].slice(recipe.ingredients[4].indexOf('p')));
-  result.push(recipe.ingredients[5].slice(8));
-  result.push(recipe.ingredients[6].slice(recipe.ingredients[6].indexOf('b')));
-  result.push(recipe.ingredients[7].slice(recipe.ingredients[7].indexOf('b')));
-  result.push(recipe.ingredients[8].slice(recipe.ingredients[8].indexOf('c')));
-  result.push(recipe.ingredients[9].slice(recipe.ingredients[9].indexOf('m')));
-  result.push(recipe.ingredients[10].slice(recipe.ingredients[10].indexOf('f')));
-
+  for(let i = 0; i < recipe.ingredients.length; i++){
+    let slicedWords = recipe.ingredients[i].slice(recipe.ingredients[i].indexOf(' ') + 1);
+    result.push(slicedWords.slice(slicedWords.indexOf(' ') + 1));
+  }
   return result;
 };
 
@@ -104,7 +96,7 @@ You may also use other string or array methods.
 const splitFoods = (recipe) => {
   let result = [];
   for(let i = 0; i < recipe.ingredients.length; i++){
-    
+
     let tempStr = recipe.ingredients[i].split(' ');
     //remove first 2 strings
     tempStr.shift();
