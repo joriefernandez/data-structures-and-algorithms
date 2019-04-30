@@ -201,7 +201,7 @@ const deceasedSpouses = ['Catelyn', 'Lysa', 'Robert', 'Khal Drogo', 'Alerie'];
 
 const houseSurvivors = (arr) => {
   const survivors = [];
-  
+
   arr.forEach(obj => {
 
     let counter = 0;
