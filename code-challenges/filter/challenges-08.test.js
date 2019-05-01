@@ -160,7 +160,6 @@ For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 
 
 const evenOddNumericValues = (arr) => {
   let filtered = arr.filter(value => typeof(value) === 'number');
-  console.log(filtered);
   return filtered.map(value => {
     if(value % 2){
       return 'odd';
