@@ -124,7 +124,17 @@ let starWarsData = [{
 }];
 
 let findMaleAndFemale = (data) => {
-  
+  return data.reduce((result, character) => {
+    if (character.gender === 'male' || character.gender === 'female'){
+      if(result !== ''){
+        result = `${result} and ${character.name}`;
+      } else{
+        result = character.name;
+      }
+    }
+    return result;
+  },'');
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -134,7 +144,16 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
-  // Solution code here...
+  let result = data.reduce((shortest, character) => {
+    if(parseInt(shortest.height) > parseInt(character.height)){
+      shortest.char = character.name;
+      shortest.height = character.height;
+    }
+    return shortest;
+  },{char:'', height: 100000});
+
+  return result.char;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
