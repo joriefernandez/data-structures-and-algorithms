@@ -174,13 +174,14 @@ For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 ------------------------------------------------------------------------------------------------ */
 
 const excel = (str) => {
-  let result = [];
+
   let groupedString = str.split('\n');
-  groupedString.forEach(string => {
+  return groupedString.reduce((result, string) => {
     let spl = string.split(',');
     result.push(spl.reduce((sum, val) => sum + parseInt(val), 0));
-  });
-  return result;
+    return result;
+  }, []);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
