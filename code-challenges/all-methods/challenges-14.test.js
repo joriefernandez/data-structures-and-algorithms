@@ -148,10 +148,30 @@ Here is a sample board:
 ];
 ------------------------------------------------------------------------------------------------ */
 const checkBoard = (row1, col1, row2, col2, row3, col3, arr) => {
-  return (arr[row1][col1] === arr[row2][col2]) && (arr[row2][col2] === arr[row3][col3]); 
+  return (arr[row1][col1] === arr[row2][col2]) && (arr[row2][col2] === arr[row3][col3]) && arr[row1][col1];
 };
 const detectTicTacToeWin = (board) => {
   
+  //check rows
+  for(let i = 0; i < board.length; i++){
+    let j = 0;
+    if(checkBoard(i, j++, i, j++, i, j++, board)){
+      return true;
+    }
+  }
+  //check columns
+  for(let j = 0; j < board[0].length; j++){
+    let i = 0;
+    if(checkBoard(i++, j, i++, j, i++, j, board)){
+      return true;
+    }
+  }
+  //check diagonal
+  if(checkBoard(0, 0, 1, 1, 2, 2, board)){
+    return true;
+  }
+
+  return false;
 };
 
 /* ------------------------------------------------------------------------------------------------
