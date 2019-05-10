@@ -102,7 +102,15 @@ This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
 const sortBy = (property, arr) => {
-  // Solution code here...
+  return arr.sort((a, b) => {
+    if(a[property] > b[property]){
+      return 1;
+    } else if(a[property] === b[property]){
+      return 0;
+    }else{
+      return -1;
+    }
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -118,7 +126,7 @@ https://secure.com returns true because the URL is secure
 https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
 const isSecure = (url) => {
-// Solution code here...
+  return /https:\/\/\w+/.test(url);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -139,9 +147,31 @@ Here is a sample board:
   ['X', 'O', 'X'],
 ];
 ------------------------------------------------------------------------------------------------ */
-
+const checkBoard = (row1, col1, row2, col2, row3, col3, arr) => {
+  return (arr[row1][col1] === arr[row2][col2]) && (arr[row2][col2] === arr[row3][col3]) && arr[row1][col1];
+};
 const detectTicTacToeWin = (board) => {
-  // Solution code here...
+  
+  //check rows
+  for(let i = 0; i < board.length; i++){
+    let j = 0;
+    if(checkBoard(i, j++, i, j++, i, j++, board)){
+      return true;
+    }
+  }
+  //check columns
+  for(let j = 0; j < board[0].length; j++){
+    let i = 0;
+    if(checkBoard(i++, j, i++, j, i++, j, board)){
+      return true;
+    }
+  }
+  //check diagonal
+  if(checkBoard(0, 0, 1, 1, 2, 2, board)){
+    return true;
+  }
+
+  return false;
 };
 
 /* ------------------------------------------------------------------------------------------------
