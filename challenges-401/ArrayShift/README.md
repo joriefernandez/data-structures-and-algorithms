@@ -1,5 +1,5 @@
 # Challenge 2 Summary
-Insert a value into the middle index of the given array using Java.
+Insert a value into the middle index of the given array using Java. Source and test codes are found in src folder.
 
 ## Challenge Description
 The task is to write a function called insertShiftArray which takes in an array and the value to be added. Without utilizing any of the built-in methods available to Java, return an array with the new value added at the middle index.
