@@ -1,4 +1,4 @@
-# Challenge Summary
+# Challenge 2 Summary
 Insert a value into the middle index of the given array using Java.
 
 ## Challenge Description
