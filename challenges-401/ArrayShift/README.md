@@ -9,4 +9,4 @@ The approach is to create a new array, which will contain the original and the p
 
 
 ## Solution
-[challenges-401/assets/array_shift.jpg]
+[https://raw.githubusercontent.com/joriefernandez/data-structures-and-algorithms/master/challenges-401/assets/array_shift.jpg]
