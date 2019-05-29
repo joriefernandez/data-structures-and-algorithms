@@ -9,5 +9,6 @@ The approach is to create a new array, which will contain the original and the p
 
 
 ## Solution
-[Code](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/ArrayShift/src/main/java/ArrayShift/ArrayShift.java)
+* [Code](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/ArrayShift/src/main/java/ArrayShift/ArrayShift.java)
+* Whiteboard
 ![alt array_shift](https://raw.githubusercontent.com/joriefernandez/data-structures-and-algorithms/master/challenges-401/assets/array_shift.jpg)
