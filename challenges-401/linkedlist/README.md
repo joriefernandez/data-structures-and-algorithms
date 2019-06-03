@@ -16,7 +16,10 @@ Creates a null list. Example: LinkedList sample = new LinkedList();
 ### Methods:
 #### 1. insert 
 Method to insert value to the list. Parameter is the value to be inserted.
+* Example: sample.insert(1)
 #### 2. includes
 Method to find if a value exist. Parameter is the value to be searched.
+* Example: sample.includes(1)
 #### 3. print
 Method to print all values in the list. No parameter to pass. Returns list of values.
+* Example: sample.print()
