@@ -2,7 +2,7 @@
 Implemented a singly linked list data structure.
 
 ## Challenge
-Create a LinkedList and Node classes for singly linked list.
+Create a LinkedList and Node classes under src folder for singly linked list.
 
 ## Approach & Efficiency
 Created a Node class with corresponding constructors and a LinkedList class with methods and constructors. Methods:
