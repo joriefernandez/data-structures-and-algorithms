@@ -2,7 +2,7 @@
 Implemented a singly linked list data structure.
 
 ## Challenge
-Create a [LinkedList and Node classes](https://github.com/joriefernandez/data-structures-and-algorithms/tree/master/challenges-401/linkedlist/src/main/java/linkedlist) under src folder for singly linked list. [Test class](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/linkedlist/src/test/java/linkedlist/LinkedListTest.java) is also implemented.
+Create a [LinkedList and Node classes](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/linkedlist/src/main/java/linkedlist/LinkedList.java) under src folder for singly linked list. [Test class](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/linkedlist/src/test/java/linkedlist/LinkedListTest.java) is also implemented.
 
 ## Approach & Efficiency
 Created a Node class with corresponding constructors and a LinkedList class with methods and constructors. Methods:
