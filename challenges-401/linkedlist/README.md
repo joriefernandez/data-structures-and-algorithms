@@ -37,4 +37,9 @@ Method to insert a value after a value in the list. Parameter is an integer valu
 * Example: `sample.insertAfter(4, 10)`
 
 ## Whiteboard
+* append
+![alt append](https://raw.githubusercontent.com/joriefernandez/data-structures-and-algorithms/master/challenges-401/assets/ll_insertions2.jpg)
+* insertBefore
+![alt insertBefore](https://raw.githubusercontent.com/joriefernandez/data-structures-and-algorithms/master/challenges-401/assets/ll_insertions3.jpg)
+* insertAfter
 ![alt insertAfter](https://raw.githubusercontent.com/joriefernandez/data-structures-and-algorithms/master/challenges-401/assets/ll_insertions1.jpg)
