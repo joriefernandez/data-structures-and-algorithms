@@ -1,8 +1,8 @@
 # Singly Linked List
-Implemented a singly linked list data structure.
+Implemented a singly linked list data structure with methods.
 
 ## Challenge
-Create a [LinkedList and Node classes](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/linkedlist/src/main/java/linkedlist/LinkedList.java) under src folder for singly linked list. [Test class](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/linkedlist/src/test/java/linkedlist/LinkedListTest.java) is also implemented.
+Create a [LinkedList and Node classes](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/linkedlist/src/main/java/linkedlist/LinkedList.java) with methods under src folder for singly linked list. [Test class](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/linkedlist/src/test/java/linkedlist/LinkedListTest.java) is also implemented.
 
 ## Approach & Efficiency
 Created a Node class with corresponding constructors and a LinkedList class with methods and constructors. Methods:
@@ -14,7 +14,8 @@ Created a Node class with corresponding constructors and a LinkedList class with
 6. insertBefore - Time complexity: 0(n) and Space Complexity: 0(1). Looping through the list to find and insert the new value.
 ## API
 ### Initialization
-Creates a null list. Example: LinkedList sample = new LinkedList();
+Creates a null list. 
+* Example: `LinkedList sample = new LinkedList();`
 ### Methods:
 #### 1. insert 
 Method to insert value to the list. Parameter is the value to be inserted.
@@ -34,3 +35,11 @@ Method to insert a value before a value in the list. Parameter is an integer val
 #### 4. insertAfter
 Method to insert a value after a value in the list. Parameter is an integer value that is in the list and the new value to be inserted.
 * Example: `sample.insertAfter(4, 10)`
+
+## Whiteboard
+* append
+![alt append](https://raw.githubusercontent.com/joriefernandez/data-structures-and-algorithms/master/challenges-401/assets/ll_insertions2.jpg)
+* insertBefore
+![alt insertBefore](https://raw.githubusercontent.com/joriefernandez/data-structures-and-algorithms/master/challenges-401/assets/ll_insertions3.jpg)
+* insertAfter
+![alt insertAfter](https://raw.githubusercontent.com/joriefernandez/data-structures-and-algorithms/master/challenges-401/assets/ll_insertions1.jpg)
