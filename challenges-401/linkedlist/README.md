@@ -14,7 +14,8 @@ Created a Node class with corresponding constructors and a LinkedList class with
 6. insertBefore - Time complexity: 0(n) and Space Complexity: 0(1). Looping through the list to find and insert the new value.
 ## API
 ### Initialization
-Creates a null list. Example: LinkedList sample = new LinkedList();
+Creates a null list. 
+* Example: `LinkedList sample = new LinkedList();`
 ### Methods:
 #### 1. insert 
 Method to insert value to the list. Parameter is the value to be inserted.
