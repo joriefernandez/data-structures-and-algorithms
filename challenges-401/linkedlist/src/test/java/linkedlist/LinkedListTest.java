@@ -89,4 +89,173 @@ public class LinkedListTest {
         test.insert(4);
         assertEquals("Head should be the last inserted value.", false,  test.includes(100));
     }
+
+    //Test append if list is empty
+    @Test public void testAppendEmpty() {
+        List<Integer> expected = new ArrayList<>();
+        expected.add(23);
+        LinkedList test = new LinkedList();
+        test.append(23);
+        assertEquals("Should be appended at the end.", expected ,  test.print());
+    }
+
+    //Test append if list is not empty
+    @Test public void testAppendValues() {
+        List<Integer> expected = new ArrayList<>();
+        expected.add(23);
+        expected.add(2);
+
+        LinkedList test = new LinkedList();
+        test.append(23);
+        test.append(2);
+        assertEquals("Should be appended at the end.", expected ,  test.print());
+
+        //add another value
+        expected.add(2000);
+        test.append(2000);
+        assertEquals("Should be appended at the end.", expected ,  test.print());
+
+    }
+
+    //Test insertBefore if list has one value
+    @Test
+    public void testInsertBeforeOneValue() {
+        List<Integer> expected = new ArrayList<>();
+        expected.add(10);
+        expected.add(23);
+
+        LinkedList test = new LinkedList();
+        test.append(23);
+        test.insertBefore(23, 10);
+
+        assertEquals("Should be inserted at the beginning.", expected ,  test.print());
+
+    }
+
+    //Test insertBefore if list has one value and searched value not found
+    @Test (expected=IllegalArgumentException.class)
+    public void testInsertBeforeOneValueNotFound() {
+        LinkedList test = new LinkedList();
+        test.insertBefore(23, 10);
+
+    }
+
+    //Test insertBefore if list has one value
+    @Test
+    public void testInsertBeforeValues() {
+        List<Integer> expected = new ArrayList<>();
+        expected.add(235);
+        expected.add(23);
+        expected.add(10);
+
+
+
+        LinkedList test = new LinkedList();
+        test.insert(10);
+        test.insertBefore(10, 23);
+        test.insertBefore(23, 235);
+        assertEquals("Should be inserted at the beginning.", expected ,  test.print());
+
+    }
+
+    //Test insertBefore on tail value
+    @Test
+    public void testInsertBeforeTailValues() {
+        List<Integer> expected = new ArrayList<>();
+        expected.add(235);
+        expected.add(23);
+        expected.add(111);
+        expected.add(10);
+
+
+
+        LinkedList test = new LinkedList();
+        test.insert(10);
+        test.insertBefore(10, 23);
+        test.insertBefore(23, 235);
+        test.insertBefore(10, 111);
+
+        assertEquals("Should be inserted before tail.", expected ,  test.print());
+
+    }
+
+    //Test insertBefore on tail value
+    @Test
+    public void testInsertBeforeMidValues() {
+        List<Integer> expected = new ArrayList<>();
+        expected.add(235);
+        expected.add(23);
+        expected.add(25);
+        expected.add(111);
+        expected.add(10);
+
+        LinkedList test = new LinkedList();
+        test.insert(10);
+        test.insertBefore(10, 23);
+        test.insertBefore(23, 235);
+        test.insertBefore(10, 111);
+        test.insertBefore(111, 25);
+        assertEquals("Should be inserted at the beginning.", expected ,  test.print());
+
+    }
+
+    //Test insertBefore if list has one value and searched value not found
+    @Test (expected=IllegalArgumentException.class)
+    public void testInsertAfterOneValueNotFound() {
+        LinkedList test = new LinkedList();
+        test.insertAfter(23, 10);
+
+    }
+
+    //Test insertAfter if searched value is the head value
+    @Test
+    public void testInsertAfterHead(){
+        List<Integer> expected = new ArrayList<>();
+        expected.add(1);
+        expected.add(3);
+
+        LinkedList test = new LinkedList();
+        test.append(1);
+        test.insertAfter(1, 3);
+        assertEquals("Inserted value should be the head", expected , test.print());
+    }
+
+    //Test insertAfter if searched value is the tail value
+    @Test
+    public void testInsertAfterTail(){
+        List<Integer> expected = new ArrayList<>();
+        expected.add(1);
+        expected.add(3);
+        expected.add(5);
+        expected.add(20);
+
+        LinkedList test = new LinkedList();
+        test.append(1);
+        test.append(3);
+        test.append(5);
+        test.insertAfter(5, 20);
+        assertEquals("Inserted value should be the head", expected , test.print());
+    }
+
+    //Test insertAfter if searched value is the tail value
+    @Test
+    public void testInsertAfterMid(){
+        List<Integer> expected = new ArrayList<>();
+        expected.add(1);
+        expected.add(3);
+        expected.add(5);
+        expected.add(14);
+        expected.add(20);
+        expected.add(11);
+
+        LinkedList test = new LinkedList();
+        test.append(1);
+        test.append(3);
+        test.append(5);
+        test.append(20);
+        test.append(11);
+        test.insertAfter(5, 14);
+        assertEquals("Inserted value should be the head", expected , test.print());
+    }
+
 }
