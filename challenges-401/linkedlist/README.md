@@ -35,3 +35,6 @@ Method to insert a value before a value in the list. Parameter is an integer val
 #### 4. insertAfter
 Method to insert a value after a value in the list. Parameter is an integer value that is in the list and the new value to be inserted.
 * Example: `sample.insertAfter(4, 10)`
+
+## Whiteboard
+![alt insertAfter](https://raw.githubusercontent.com/joriefernandez/data-structures-and-algorithms/master/challenges-401/assets/ll_insertions1.jpg)
