@@ -48,4 +48,4 @@ Method to get the kth value from the end of the list. Parameter is an integer va
 * insertAfter
 ![alt insertAfter](https://raw.githubusercontent.com/joriefernandez/data-structures-and-algorithms/master/challenges-401/assets/ll_insertions1.jpg)
 * getKthValue
-![alt getKthValue]
+![alt getKthValue](https://raw.githubusercontent.com/joriefernandez/data-structures-and-algorithms/master/challenges-401/assets/ll_kth_from_end.jpg)
