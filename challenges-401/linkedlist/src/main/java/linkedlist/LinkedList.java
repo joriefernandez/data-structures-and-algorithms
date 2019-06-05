@@ -210,6 +210,11 @@ public class LinkedList {
         }
     }
 
+    /**
+     * Method to return value based from the kth position from the end
+     * @param param kth position
+     * @return value 
+     */
     public int getKthValue(int param){
 
         if(param < 0 || param >= size){
