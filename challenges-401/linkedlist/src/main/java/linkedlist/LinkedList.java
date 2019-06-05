@@ -210,5 +210,24 @@ public class LinkedList {
         }
     }
 
+    public int getKthValue(int param){
+
+        if(param < 0 || param >= size){
+            throw new IllegalArgumentException("Invalid kth value.");
+        }
+
+        int position = size - param;
+        int ctr = 1;
+        Node current = head;
+
+        while(ctr < position && current != null){
+            current = current.next;
+            ctr += 1;
+        }
+
+        return current.value;
+
+    }
+
 
 }
