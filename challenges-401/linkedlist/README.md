@@ -12,6 +12,7 @@ Created a Node class with corresponding constructors and a LinkedList class with
 4. append - Time and Space complexities: 0(1). We are just getting the tail to append the new node. 
 5. insertBefore - Time complexity: 0(n) and Space Complexity: 0(1). Looping through the list to find and insert the new value.
 6. insertBefore - Time complexity: 0(n) and Space Complexity: 0(1). Looping through the list to find and insert the new value.
+7. getKthValue - Time complexity: 0(n) and Space Complexity: 0(1). Looping through the list to get to the position.
 ## API
 ### Initialization
 Creates a null list. 
