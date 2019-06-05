@@ -258,4 +258,91 @@ public class LinkedListTest {
         assertEquals("Inserted value should be the head", expected , test.print());
     }
 
+    // Test kth Node
+    @Test
+    public void testKthValue(){
+        LinkedList test = new LinkedList();
+        test.append(1);
+        test.append(3);
+        test.append(5);
+        test.append(20);
+        test.append(11);
+
+        assertEquals("Should return the kth value.", 5, test.getKthValue(2));
+    }
+
+    // Test kthValue if looking for first Node
+    @Test
+    public void testKthValueFirst(){
+        LinkedList test = new LinkedList();
+        test.append(1);
+        test.append(3);
+        test.append(5);
+        test.append(20);
+        test.append(11);
+
+        assertEquals("Should return the kth value.", 1, test.getKthValue(4));
+    }
+
+    // Test kthValue if looking for last Node
+    @Test
+    public void testKthValueLast(){
+        LinkedList test = new LinkedList();
+        test.append(1);
+        test.append(3);
+        test.append(5);
+        test.append(20);
+        test.append(11);
+
+        assertEquals("Should return the kth value.", 11, test.getKthValue(0));
+    }
+
+    // Test kthValue if looking for the only node
+    @Test
+    public void testKthValueOne(){
+        LinkedList test = new LinkedList();
+        test.append(23);
+        assertEquals("Should return the kth value.", 23, test.getKthValue(0));
+    }
+
+
+    // Test kthValue if looking for last Node
+    @Test (expected = IllegalArgumentException.class)
+    public void testKthValueInvalidNegative(){
+        LinkedList test = new LinkedList();
+        test.getKthValue(9);
+    }
+
+    // Test kthValue if looking for last Node
+    @Test (expected = IllegalArgumentException.class)
+    public void testKthValueEmpty(){
+        LinkedList test = new LinkedList();
+        test.getKthValue(1);
+    }
+
+    // Test kthValue if looking for last Node
+    @Test (expected = IllegalArgumentException.class)
+    public void testKthValueSameSizeK(){
+        LinkedList test = new LinkedList();
+        test.append(23);
+        test.getKthValue(1);
+    }
+
+
+    // Test kthValue if looking for last Node
+    @Test (expected = IllegalArgumentException.class)
+    public void testKthValueSame(){
+        LinkedList test = new LinkedList();
+        test.append(1);
+        test.append(3);
+        test.append(5);
+        test.append(20);
+        test.append(11);
+
+        test.getKthValue(5);
+    }
+
+
+
+
 }
