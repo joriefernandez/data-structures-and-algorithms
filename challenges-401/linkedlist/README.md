@@ -35,6 +35,9 @@ Method to insert a value before a value in the list. Parameter is an integer val
 #### 4. insertAfter
 Method to insert a value after a value in the list. Parameter is an integer value that is in the list and the new value to be inserted.
 * Example: `sample.insertAfter(4, 10)`
+#### 5. getKthValue
+Method to get the kth value from the end of the list. Parameter is an integer value that indicates the position.
+* Example: `sample.getKthValue(2)`
 
 ## Whiteboard
 * append
@@ -43,3 +46,5 @@ Method to insert a value after a value in the list. Parameter is an integer valu
 ![alt insertBefore](https://raw.githubusercontent.com/joriefernandez/data-structures-and-algorithms/master/challenges-401/assets/ll_insertions3.jpg)
 * insertAfter
 ![alt insertAfter](https://raw.githubusercontent.com/joriefernandez/data-structures-and-algorithms/master/challenges-401/assets/ll_insertions1.jpg)
+* getKthValue
+![alt getKthValue]
