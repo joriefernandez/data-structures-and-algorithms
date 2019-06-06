@@ -342,7 +342,140 @@ public class LinkedListTest {
         test.getKthValue(5);
     }
 
+    // Test merge list
+    @Test
+    public void testMergeList(){
+        LinkedList list1 = new LinkedList();
+        list1.append(1);
+        LinkedList list2 = new LinkedList();
+        list2.append(20);
 
+        LinkedList test = new LinkedList();
+        test.mergeLists(list1, list2);
+
+        List<Integer> result = new ArrayList<>();
+        result.add(1);
+        result.add(20);
+        assertEquals("Lists should be merged.", result, test.print() );
+    }
+
+    // Test merge list
+    @Test
+    public void testMergeListWithValues(){
+        LinkedList list1 = new LinkedList();
+        list1.append(1);
+        list1.append(3);
+        list1.append(2);
+        LinkedList list2 = new LinkedList();
+        list2.append(5);
+        list2.append(9);
+        list2.append(4);
+
+        LinkedList test = new LinkedList();
+        test.mergeLists(list1, list2);
+
+        List<Integer> result = new ArrayList<>();
+        result.add(1);
+        result.add(5);
+        result.add(3);
+        result.add(9);
+        result.add(2);
+        result.add(4);
+
+        assertEquals("Lists should be merged.", result, test.print() );
+    }
+
+    // Test merge list
+    @Test
+    public void testMergeListWithVariedSize(){
+        LinkedList list1 = new LinkedList();
+        list1.append(1);
+        list1.append(3);
+
+        LinkedList list2 = new LinkedList();
+        list2.append(5);
+        list2.append(9);
+        list2.append(4);
+
+        LinkedList test = new LinkedList();
+        test.mergeLists(list1, list2);
+
+        List<Integer> result = new ArrayList<>();
+        result.add(1);
+        result.add(5);
+        result.add(3);
+        result.add(9);
+        result.add(4);
+
+        assertEquals("Lists should be merged.", result, test.print() );
+    }
+
+    // Test merge list
+    @Test
+    public void testMergeListWithVariedSize2(){
+        LinkedList list1 = new LinkedList();
+        list1.append(1);
+        list1.append(3);
+        list1.append(5);
+
+        LinkedList list2 = new LinkedList();
+
+        list2.append(9);
+        list2.append(4);
+
+        LinkedList test = new LinkedList();
+        test.mergeLists(list1, list2);
+
+        List<Integer> result = new ArrayList<>();
+        result.add(1);
+        result.add(9);
+        result.add(3);
+        result.add(4);
+        result.add(5);
+
+        assertEquals("Lists should be merged.", result, test.print() );
+    }
+
+    // Test merge list
+    @Test
+    public void testMergeListWithList1Null(){
+        LinkedList list1 = new LinkedList();
+
+        LinkedList list2 = new LinkedList();
+        list2.append(9);
+        list2.append(4);
+
+        LinkedList test = new LinkedList();
+        test.mergeLists(list1, list2);
+
+        List<Integer> result = new ArrayList<>();
+        result.add(9);
+        result.add(4);
+
+
+        assertEquals("Lists should be merged.", result, test.print() );
+    }
+
+    // Test merge list
+    @Test
+    public void testMergeListWithNullList(){
+        LinkedList list1 = new LinkedList();
+        list1.append(1);
+        list1.append(3);
+        list1.append(5);
+
+        LinkedList list2 = new LinkedList();
+
+        LinkedList test = new LinkedList();
+        test.mergeLists(list1, list2);
+
+        List<Integer> result = new ArrayList<>();
+        result.add(1);
+        result.add(3);
+        result.add(5);
+
+        assertEquals("Lists should be merged.", result, test.print() );
+    }
 
 
 }

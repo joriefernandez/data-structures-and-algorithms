@@ -234,5 +234,55 @@ public class LinkedList {
 
     }
 
+    // Merge two linked list
+    public void mergeLists(LinkedList head1, LinkedList head2){
+
+
+        // check if both list are null
+        if(head1 == null && head2 == null){
+            throw new IllegalArgumentException("Invalid lists arguments.");
+        }
+
+        Node current1 = head1.head;
+        Node current2 = head2.head;
+
+
+        //check if any list is null, if so no need to merge
+        if(current1 == null){
+            head = current2;
+        }else if(current2 == null){
+            head = current1;
+        }else {
+            // Iterate through both lists and merge
+            Node next1 = current1.next;
+            Node next2 = current2.next;
+            //append first list to 2nd of first list is only 1
+            if (next1 == null) {
+                current1.next = current2;
+                head =  current1;
+            } else {
+
+                while (next1 != null && next2 != null) {
+                    current1.next = current2;
+                    current2.next = next1;
+                    current1 = next1;
+                    current2 = next2;
+                    next1 = current1.next;
+                    next2 = current2.next;
+                }
+
+                if (next2 == null) {
+                    current1.next = current2;
+                    current2.next = next1;
+                } else {
+
+                    current1.next = current2;
+                }
+                head = head1.head;
+            }
+        }
+
+    }
+
 
 }
