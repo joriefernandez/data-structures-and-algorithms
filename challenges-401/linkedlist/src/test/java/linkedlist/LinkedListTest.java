@@ -410,7 +410,7 @@ public class LinkedListTest {
         assertEquals("Lists should be merged.", result, test.print() );
     }
 
-    // Test merge list
+    // Test merge list with varied size
     @Test
     public void testMergeListWithVariedSize2(){
         LinkedList list1 = new LinkedList();
@@ -436,7 +436,7 @@ public class LinkedListTest {
         assertEquals("Lists should be merged.", result, test.print() );
     }
 
-    // Test merge list
+    // Test merge list with null first list
     @Test
     public void testMergeListWithList1Null(){
         LinkedList list1 = new LinkedList();
@@ -456,7 +456,7 @@ public class LinkedListTest {
         assertEquals("Lists should be merged.", result, test.print() );
     }
 
-    // Test merge list
+    // Test merge list with 2nd list null
     @Test
     public void testMergeListWithNullList(){
         LinkedList list1 = new LinkedList();
@@ -477,5 +477,10 @@ public class LinkedListTest {
         assertEquals("Lists should be merged.", result, test.print() );
     }
 
-
+    //Test invalid input
+    @Test (expected = IllegalArgumentException.class)
+    public void testMergeListsInvalid() {
+        LinkedList test = new LinkedList();
+        test.mergeLists(null, null);
+    }
 }

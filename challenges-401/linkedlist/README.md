@@ -13,6 +13,7 @@ Created a Node class with corresponding constructors and a LinkedList class with
 5. insertBefore - Time complexity: 0(n) and Space Complexity: 0(1). Looping through the list to find and insert the new value.
 6. insertBefore - Time complexity: 0(n) and Space Complexity: 0(1). Looping through the list to find and insert the new value.
 7. getKthValue - Time complexity: 0(n) and Space Complexity: 0(1). Looping through the list to get to the position.
+8. mergeLists - Time complexity: 0(n) and Space Complexity: 0(1). Looping through the lists to merge.
 ## API
 ### Initialization
 Creates a null list. 
@@ -39,6 +40,9 @@ Method to insert a value after a value in the list. Parameter is an integer valu
 #### 5. getKthValue
 Method to get the kth value from the end of the list. Parameter is an integer value that indicates the position.
 * Example: `sample.getKthValue(2)`
+#### 6. mergeLists
+Method to merge two linked list. Parameters are two linked lists.
+* Example: `sample.mergeLists(list1, list2)`
 
 ## Whiteboard
 * append
@@ -49,3 +53,5 @@ Method to get the kth value from the end of the list. Parameter is an integer va
 ![alt insertAfter](https://raw.githubusercontent.com/joriefernandez/data-structures-and-algorithms/master/challenges-401/assets/ll_insertions1.jpg)
 * getKthValue
 ![alt getKthValue](https://raw.githubusercontent.com/joriefernandez/data-structures-and-algorithms/master/challenges-401/assets/ll_kth_from_end.jpg)
+* mergeLists
+![alt mergeLists]
