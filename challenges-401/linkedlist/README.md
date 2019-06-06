@@ -54,4 +54,4 @@ Method to merge two linked list. Parameters are two linked lists.
 * getKthValue
 ![alt getKthValue](https://raw.githubusercontent.com/joriefernandez/data-structures-and-algorithms/master/challenges-401/assets/ll_kth_from_end.jpg)
 * mergeLists
-![alt mergeLists]
+![alt mergeLists](https://raw.githubusercontent.com/joriefernandez/data-structures-and-algorithms/master/challenges-401/assets/merge-list.jpg)
