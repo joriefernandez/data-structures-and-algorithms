@@ -308,7 +308,7 @@ public class LinkedListTest {
 
     // Test kthValue if looking for last Node
     @Test (expected = IllegalArgumentException.class)
-    public void testKthValueInvalidNegative(){
+    public void testKthValueInvalid(){
         LinkedList test = new LinkedList();
         test.getKthValue(9);
     }
@@ -340,6 +340,13 @@ public class LinkedListTest {
         test.append(11);
 
         test.getKthValue(5);
+    }
+
+    // Test kthValue if looking for last Node
+    @Test (expected = IllegalArgumentException.class)
+    public void testKthValueInvalidNegative(){
+        LinkedList test = new LinkedList();
+        test.getKthValue(-1);
     }
 
     // Test merge list
