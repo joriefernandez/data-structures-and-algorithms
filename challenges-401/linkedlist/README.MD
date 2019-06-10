@@ -7,13 +7,13 @@ Create a [Stack](https://github.com/joriefernandez/data-structures-and-algorithm
 ## Approach & Efficiency
 Created a Node class with corresponding constructors and a Stack and Queue classes with methods and constructors. Methods:
 * Stack
-push - Time and Space complexities: 0(1). The value is inserted at the start of the list.
-pop - Time complexity: 0(1) and Space Complexity: 0(1). Access top property of the stack.
-peek - Time and space complexities: 0(1). Access top property of the stack
+1. push - Time and Space complexities: 0(1). The value is inserted at the start of the list.
+2. pop - Time complexity: 0(1) and Space Complexity: 0(1). Access top property of the stack.
+3. peek - Time and space complexities: 0(1). Access top property of the stack
 * Queue
-enqueue - Time and Space complexities: 0(1). Use the back property to add the value.
-dequeue - Time complexity: 0(1) and Space Complexity: 0(1). Use the front property to remove and return value.
-peek - Time complexity: 0(1) and Space Complexity: 0(1). Use front property to return value.
+1. enqueue - Time and Space complexities: 0(1). Use the back property to add the value.
+2. dequeue - Time complexity: 0(1) and Space Complexity: 0(1). Use the front property to remove and return value.
+3. peek - Time complexity: 0(1) and Space Complexity: 0(1). Use front property to return value.
 
 ## API
 ### Stack Initialization
