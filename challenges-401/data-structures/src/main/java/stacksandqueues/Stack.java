@@ -40,5 +40,13 @@ public class Stack {
         return top.value;
     }
 
+    public boolean isEmpty(){
+        return top == null;
+    }
+
+    public Node getTop(){
+        return top;
+    }
+
 
 }

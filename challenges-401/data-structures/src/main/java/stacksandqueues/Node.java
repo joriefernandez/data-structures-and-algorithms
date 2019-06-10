@@ -16,4 +16,8 @@ public class Node {
         this.value = val;
         this.next = null;
     }
+
+    public int getValue(){
+        return value;
+    }
 }
