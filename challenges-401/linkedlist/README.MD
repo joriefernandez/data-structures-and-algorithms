@@ -18,36 +18,35 @@ Created a Node class with corresponding constructors and a Stack and Queue class
 ## API
 ### Stack Initialization
 Creates a null Stack.
-
-Example: Stack sample = new Stack();
+* Example: Stack sample = new Stack();
 Methods:
 1. push
-Method to insert value to the stack. Parameter is the integer value to be inserted.
+* Method to insert value to the stack. Parameter is the integer value to be inserted.
 
-Example: `sample.push(1)`
+* Example: `sample.push(1)`
 2. pop
-Method to remove and return the top value. No parameter.
+* Method to remove and return the top value. No parameter.
 
-Example: `sample.pop()`
+* Example: `sample.pop()`
 3. peek
-Method to return top value without removing. No parameter to pass. 
+* Method to return top value without removing. No parameter to pass. 
 
-Example: `sample.peek()`
+* Example: `sample.peek()`
 
 ### Queue Initialization
 Creates a null queue.
 
-Example: Queue sample = new Queue();
+* Example: Queue sample = new Queue();
 Methods:
 1. enqueue
-Method to insert value to the queue. Parameter is the integer value to be inserted.
+* Method to insert value to the queue. Parameter is the integer value to be inserted.
 
-Example: `sample.enqueue(1)`
+* Example: `sample.enqueue(1)`
 2. dequeue
-Method to remove and return the top value. No parameter.
+* Method to remove and return the top value. No parameter.
 
-Example: `sample.dequeue()`
+* Example: `sample.dequeue()`
 3. peek
-Method to return top value without removing. No parameter to pass. 
+* Method to return top value without removing. No parameter to pass. 
 
-Example: `sample.peek()`
+* Example: `sample.peek()`
