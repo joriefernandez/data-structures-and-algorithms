@@ -5,6 +5,7 @@
 #### [Array shift](https://github.com/joriefernandez/data-structures-and-algorithms/tree/master/challenges-401/ArrayShift)
 #### [Binary Search](https://github.com/joriefernandez/data-structures-and-algorithms/tree/master/challenges-401/binarySearch)
 #### [Singly Linked List](https://github.com/joriefernandez/data-structures-and-algorithms/tree/master/challenges-401/linkedlist)
+#### [Stack and Queue](https://github.com/joriefernandez/data-structures-and-algorithms/tree/master/challenges-401/linkedlist)
 
 
 
