@@ -2,7 +2,7 @@
 Implemented a stack and queue data structures using Node class.
 
 ## Challenge
-Create a [Stack](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/linkedlist/src/main/java/stacksandqueues/Stack.java) and [Queue](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/linkedlist/src/main/java/stacksandqueues/Queue.java) classes with methods under src folder/stacksandqueus for the two data structure based from [Node class](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/linkedlist/src/main/java/stacksandqueues/Node.java). [Test classes](https://github.com/joriefernandez/data-structures-and-algorithms/tree/master/challenges-401/linkedlist/src/test/java/stacksandqueues) are also implemented.
+Create a [Stack](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/data-structures/src/main/java/stacksandqueues/Stack.java) and [Queue](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/data-structures/src/main/java/stacksandqueues/Queue.java) classes with methods under src folder/stacksandqueus for the two data structure based from [Node class](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/data-structures/src/main/java/stacksandqueues/Node.java). [Test classes](https://github.com/joriefernandez/data-structures-and-algorithms/tree/master/challenges-401/data-structures/src/test/java/stacksandqueues) are also implemented.
  
 ## Approach & Efficiency
 Created a Node class with corresponding constructors and a Stack and Queue classes with methods and constructors. Methods:
