@@ -105,4 +105,12 @@ public class QueueTest {
 
         assertNull("Front and back of queue should be updated.", test.peek());
     }
+
+    //Test queue instantiation
+    @Test
+    public void queueTest(){
+        Queue test = new Queue();
+        assertNull("Should instantiate a null node.", test.front );
+        assertNull("Should instantiate a null node.", test.back );
+    }
 }
