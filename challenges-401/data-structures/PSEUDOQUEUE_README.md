@@ -29,4 +29,4 @@ Created input and output stacks with methods and constructors.
 * [PseudoQueue](./src/main/java/QueueWithStacks/PseudoQueue.java)
 * [PseudoQueueTest](./src/test/java/QueueWithStacks/PseudoQueueTest.java)
 * WhiteBoard
-![alt queue_with_stacks ]
+![alt queue_with_stacks ](../../challenges-401/assets/queue_with_stacks.jpg)
