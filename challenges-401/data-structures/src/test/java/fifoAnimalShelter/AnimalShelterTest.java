@@ -86,4 +86,16 @@ public class AnimalShelterTest {
 
     }
 
+    // Test dequeue if valid preferred but not in the list
+    @Test
+    public void testDequeueNotPreferred(){
+        test.enqueue(new AnimalShelter.Animal("dog"));
+
+        assertNull("Animal shelter should return a dog or cat.",  test.dequeue("cat"));
+//        assertEquals("Animal shelter should contain a dog or a cat.", "dog", test.front.value.type);
+//        assertEquals("Animal shelter should contain a dog or a cat.", "dog", test.back.value.type);
+
+
+    }
+
 }

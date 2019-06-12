@@ -58,15 +58,16 @@ public class AnimalShelter {
        Animal result = null;
 
        if(front != null && (pref.equals("dog") || pref.equals("cat"))){
-           result = front.value;
+
            if(front.value.type.equals(pref)){
+               result = front.value;
                front = front.next;
                return result;
            }
            Node cur = front.next;
            Node prev = front;
            while(cur != null){
-               if(cur.value.type == pref){
+               if(cur.value.type.equals(pref)){
                    result = cur.value;
                    prev.next = cur.next;
                    cur.next = null;
