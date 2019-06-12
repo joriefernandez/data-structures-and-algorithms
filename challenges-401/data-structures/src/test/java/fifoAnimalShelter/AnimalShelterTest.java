@@ -92,8 +92,8 @@ public class AnimalShelterTest {
         test.enqueue(new AnimalShelter.Animal("dog"));
 
         assertNull("Animal shelter should return a dog or cat.",  test.dequeue("cat"));
-//        assertEquals("Animal shelter should contain a dog or a cat.", "dog", test.front.value.type);
-//        assertEquals("Animal shelter should contain a dog or a cat.", "dog", test.back.value.type);
+        assertEquals("Animal shelter should contain a dog or a cat.", "dog", test.front.value.type);
+        assertEquals("Animal shelter should contain a dog or a cat.", "dog", test.back.value.type);
 
 
     }
