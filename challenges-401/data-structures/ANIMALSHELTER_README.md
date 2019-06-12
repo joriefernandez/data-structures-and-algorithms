@@ -29,4 +29,4 @@ Created a Node and Animal class. Used the concept of queues for FIFO.
 * [AnimalShelter](./src/main/java/fifoAnimalShelter/AnimalShelter.java)
 * [AnimalShelterTest](./src/test/java/fifoAnimalShelter/AnimalShelterTest.java)
 * WhiteBoard
-![alt fifo_animal_shelter ](../../challenges-401/assets/fifo_animal_shelter.jpg)
+![alt fifo_animal_shelter](../../challenges-401/assets/fifo_animal_shelter.jpg)
