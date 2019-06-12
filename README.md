@@ -7,5 +7,6 @@
 #### [Singly Linked List](https://github.com/joriefernandez/data-structures-and-algorithms/tree/master/challenges-401/linkedlist)
 #### [Stack and Queue](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/data-structures/STACK_QUEUE_README.MD)
 #### [Queue with stacks](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/data-structures/PSEUDOQUEUE_README.md)
+#### [FIFO Animal Shelter](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/data-structures/ANIMALSHELTER_README.md)
 
 
