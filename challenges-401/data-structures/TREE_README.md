@@ -1,6 +1,5 @@
 # Binary and Binary Search Trees
-Validate brackets ({}, (), []) if balanced or not. Paired with Liz Mahoney.
-
+Create trees. Collaborated with Jen Shin.
 ## Challenge
 Created a Binary Tree and Binary Search Tree.
 ## Approach and Efficiency
