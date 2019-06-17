@@ -13,7 +13,7 @@ public class BinarySearchTreeTest {
 
     @Before
     public void init(){
-        BinarySearchTree<Integer> test = new BinarySearchTree<>();
+        Tree<Integer> test = new BinarySearchTree<>();
     }
 
     @Test
@@ -30,6 +30,7 @@ public class BinarySearchTreeTest {
         assertNull("Left child should be null", test.overallRoot.left );
         assertNull("Right child should be null", test.overallRoot.right );
 
+
     }
 
     @Test
@@ -41,11 +42,55 @@ public class BinarySearchTreeTest {
         assertEquals("Values should be the same", Integer.valueOf(1), test.overallRoot.left.data );
         assertNull("Right child should be null", test.overallRoot.right );
 
-        test.add(4);
-        assertEquals("Should be inserted correctly", new ArrayList<Integer>(), test.postOrder());
+        test.add(15);
+        assertEquals("Values should be the same", Integer.valueOf(15), test.overallRoot.right.data );
+
+        test.add(13);
+        assertEquals("Values should be the same", Integer.valueOf(13), test.overallRoot.right.left.data );
+        assertNull("Left should be null", test.overallRoot.right.right );
+
+        ArrayList<Integer> expected = new ArrayList<>();
+        expected.add(10);
+        expected.add(1);
+        expected.add(15);
+        expected.add(13);
+        assertEquals("Should return correct values", expected, test.preOrder());
+
+
     }
 
     @Test
-    public void contains() {
+    public void containsNull() {
+        test = new BinarySearchTree<>();
+        assertFalse("Empty tree should return false", test.contains(1));
     }
+
+    @Test
+    public void containsTrueRoot() {
+        test = new BinarySearchTree<>();
+        test.add(1);
+        test.add(2);
+        test.add(10);
+        assertTrue("Tree contains the value", test.contains(1));
+    }
+
+    @Test
+    public void containsTrueLeaf() {
+        test = new BinarySearchTree<>();
+        test.add(1);
+        test.add(2);
+        test.add(10);
+        assertTrue("Tree contains the value", test.contains(10));
+    }
+
+    @Test
+    public void containsFalseRoot() {
+        test = new BinarySearchTree<>();
+        test.add(1);
+        test.add(2);
+        test.add(10);
+        assertFalse("Tree contains the value", test.contains(20));
+    }
+
+
 }
