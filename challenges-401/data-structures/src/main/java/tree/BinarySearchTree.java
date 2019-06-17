@@ -10,17 +10,6 @@ package tree;
  */
 
 public class BinarySearchTree<E extends Comparable<? super E>> extends Tree<E> {
-//    Node<E> overallRoot;
-//
-//    //Constructors
-//    public BinarySearchTree(){
-//        this.overallRoot = null;
-//    }
-//
-//    public BinarySearchTree(Node root){
-//        this.overallRoot = root;
-//    }
-
 
     //Add node to the tree
     public void add(E data){

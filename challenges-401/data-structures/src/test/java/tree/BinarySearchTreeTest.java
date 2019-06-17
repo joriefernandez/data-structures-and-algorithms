@@ -92,5 +92,5 @@ public class BinarySearchTreeTest {
         assertFalse("Tree contains the value", test.contains(20));
     }
 
-  
+
 }
