@@ -5,14 +5,14 @@ import java.util.ArrayList;
 public class Tree<E> {
 
     //overall root
-    private Node<E> overallRoot;
+    Node<E> overallRoot;
 
     //ordered value list
-    private ArrayList<E> values;
+    ArrayList<E> values;
 
 
     //Tree node class
-    private static class Node <E>{
+    protected static class Node <E>{
         protected E data;
         protected Node<E> left;
         protected Node<E> right;
@@ -36,6 +36,10 @@ public class Tree<E> {
         this.overallRoot = null;
     }
 
+    public Tree(Node root){
+        this.overallRoot = root;
+    }
+
     //preorder traversal
     public ArrayList<E> preOrder(){
         values = new ArrayList<E>();
@@ -55,12 +59,12 @@ public class Tree<E> {
     }
 
     //Helper for pre-order traversal
-    private ArrayList<E> preOrder(Node root){
+    private ArrayList<E> preOrder(Node<E> root){
         if(root == null){
             return null;
         }
 
-        values.add((E) root.data);
+        values.add(root.data);
         preOrder(root.left);
         preOrder(root.right);
 
@@ -68,13 +72,13 @@ public class Tree<E> {
     }
 
     //Helper for inorder traversal
-    private ArrayList<E> inOrder(Node root){
+    private ArrayList<E> inOrder(Node<E> root){
         if(root == null){
             return null;
         }
 
         inOrder(root.left);
-        values.add((E) root.data);
+        values.add(root.data);
         inOrder(root.right);
 
         return values;
@@ -82,7 +86,7 @@ public class Tree<E> {
     }
 
     //Helper for post-order traversal
-    private ArrayList<E> postOrder(Node root){
+    private ArrayList<E> postOrder(Node<E> root){
         if(root == null){
             return null;
         }
