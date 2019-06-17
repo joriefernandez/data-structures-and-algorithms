@@ -24,8 +24,7 @@ public class BinarySearchTree<E extends Comparable<? super E>> extends Tree<E> {
 
     //Add node to the tree
     public void add(E data){
-
-        add(overallRoot, data);
+        overallRoot = add(overallRoot, data);
     }
 
     public boolean contains (E value){
@@ -39,7 +38,7 @@ public class BinarySearchTree<E extends Comparable<? super E>> extends Tree<E> {
     //Helper for adding node
     private Node<E> add(Node<E> root, E value){
         if(root == null){
-            root =  new Node(value);
+            root =  new Node<E>(value);
         } else{
             int compare = value.compareTo(root.data);
             if(compare > 0){
