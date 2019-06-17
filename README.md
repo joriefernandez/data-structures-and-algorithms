@@ -9,5 +9,6 @@
 #### [Queue with stacks](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/data-structures/PSEUDOQUEUE_README.md)
 #### [FIFO Animal Shelter](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/data-structures/ANIMALSHELTER_README.md)
 #### [Multi-bracket Validation](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/data-structures/MULTIBRACKETVALIDATION_README.md)
+#### [Binary and Binary Search Trees](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/data-structures/TREE_README.md)
 
 

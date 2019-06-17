@@ -1,6 +1,5 @@
 # Binary and Binary Search Trees
-Validate brackets ({}, (), []) if balanced or not. Paired with Liz Mahoney.
-
+Create trees. Collaborated with Jen Shin.
 ## Challenge
 Created a Binary Tree and Binary Search Tree.
 ## Approach and Efficiency
@@ -27,5 +26,7 @@ Created a Binary Tree and Binary Search Tree.
 * [BinarySearchTree class](./src/main/java/tree/BinarySearchTree.java)
 * [BinarySearchTreeTest class](./src/main/test/java/tree/BinarySearchTreeTest.java)
 * [Tree class](./src/main/java/tree/Tree.java)
-* [Node](./src/main/java/tree/Node.java))
+* [TreeTest class](./src/main/test/java/tree/TreeTest.java)
+* [Node](./src/main/java/tree/Node.java)
+
 
