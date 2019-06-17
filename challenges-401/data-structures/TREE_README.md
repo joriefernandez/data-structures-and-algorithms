@@ -24,9 +24,9 @@ Created a Binary Tree and Binary Search Tree.
 
 ## Source Code
 * [BinarySearchTree class](./src/main/java/tree/BinarySearchTree.java)
-* [BinarySearchTreeTest class](./src/main/test/java/tree/BinarySearchTreeTest.java)
+* [BinarySearchTreeTest class](./src/test/java/tree/BinarySearchTreeTest.java)
 * [Tree class](./src/main/java/tree/Tree.java)
-* [TreeTest class](./src/main/test/java/tree/TreeTest.java)
+* [TreeTest class](./src/test/java/tree/TreeTest.java)
 * [Node](./src/main/java/tree/Node.java)
 
 
