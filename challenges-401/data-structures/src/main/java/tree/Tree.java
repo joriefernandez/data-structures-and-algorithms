@@ -78,5 +78,9 @@ public class Tree<E> {
 
     }
 
+    public Node<E> getOverallRoot(){
+        return this.overallRoot;
+    }
+
 
 }
