@@ -18,3 +18,4 @@ Usage example:
 ## Source Code
 * [FizzBuzzTree](./src/main/java/FizzBuzzTree/FizzBuzzTree.java)
 * [FizzBuzzTreeTest](./src/test/java/FizzBuzzTree/FizzBuzzTreeTest.java)
+* ![alt fizzbuzz_tree](../../challenges-401/assets/fizzbuzz_tree.jpg)
