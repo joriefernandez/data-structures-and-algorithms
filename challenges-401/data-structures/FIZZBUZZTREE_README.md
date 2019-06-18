@@ -11,7 +11,7 @@ Create a fizzBuzzTree method that converts tree values into:
 Used the recursion with pre-order traversal to check and convert each node. Each node string data was converted to Integer and then evaluated using mod operation to check divisibility.Time and space complexities: 0(n) with the recursion.
 ## API
 1. fizzBuzzTree - accepts Tree with String datatype.
-Usage example: 
+* Usage example: 
 `Tree<String> numbers = new Tree<>(new Node("20"));`
 `FizzBuzzTree.fizzBuzzTree(numbers);`
        
