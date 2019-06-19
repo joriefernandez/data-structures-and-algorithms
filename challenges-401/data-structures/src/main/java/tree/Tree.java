@@ -1,6 +1,9 @@
 package tree;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+import tree.Node;
 
 public class Tree<E> {
 
@@ -36,6 +39,32 @@ public class Tree<E> {
     public ArrayList<E> postOrder(){
         values = new ArrayList<>();
         return postOrder(overallRoot);
+    }
+
+    //Breadth-first traversal
+    public ArrayList<E> breadthFirst(){
+        values = new ArrayList<>();
+
+        if(overallRoot != null) {
+
+            Queue nodes = new LinkedList();
+            nodes.offer(overallRoot);
+
+            while (!nodes.isEmpty()) {
+                Node<E> currentNode = (Node<E>) nodes.poll();
+                values.add(currentNode.data);
+                if (currentNode.left != null) {
+                    nodes.offer(currentNode.left);
+                }
+
+                if (currentNode.right != null) {
+                    nodes.offer(currentNode.right);
+                }
+
+            }
+        }
+
+        return values;
     }
 
     //Helper for pre-order traversal
@@ -77,6 +106,7 @@ public class Tree<E> {
         return values;
 
     }
+
 
     public Node<E> getOverallRoot(){
         return this.overallRoot;

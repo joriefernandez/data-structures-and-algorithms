@@ -106,6 +106,26 @@ public class TreeTest {
         assertEquals("Value should do in-order", expected, testInt.inOrder());
     }
 
+    @Test
+    public void breadthFirst() {
+        Node left = new Node(1, new Node(6), new Node(7));
+        Node right = new Node(3, new Node(8), new Node(9));
+        Node rootNode = new Node(2, left, right);
+
+        ArrayList<Integer> expected = new ArrayList<>();
+        expected.add(2);
+        expected.add(1);
+        expected.add(3);
+        expected.add(6);
+        expected.add(7);
+        expected.add(8);
+        expected.add(9);
+
+        testInt = new Tree<Integer>(rootNode);
+        assertEquals("Value should do in-order", expected, testInt.breadthFirst());
+    }
+
+
 
     @Test
     public void preOrderEmpty(){
@@ -125,5 +145,12 @@ public class TreeTest {
         assertNull("Overall root should be null", testInt.postOrder());
 
     }
+
+    @Test
+    public void breadthFirstEmpty(){
+        assertEquals("BFS should return empty", new ArrayList<>(), testInt.breadthFirst());
+
+    }
+
 
 }
