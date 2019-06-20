@@ -153,7 +153,7 @@ public class TreeTest {
     }
 
     /**************************  TEST FINDMAXIMUMVALUE *******************************/
-    
+
     @Test
     public void testFindMaxNull(){
         assertNull("Overall root should be null", testInt.findMaximumValue());
