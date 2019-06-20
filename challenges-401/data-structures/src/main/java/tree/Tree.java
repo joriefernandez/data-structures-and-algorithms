@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import tree.Node;
 
-public class Tree<E> {
+public class Tree<E extends Comparable<? super E>> {
 
     //overall root
     Node<E> overallRoot;
@@ -65,6 +65,44 @@ public class Tree<E> {
         }
 
         return values;
+    }
+
+    //Find maximum value in an integer tree
+    public E findMaximumValue(){
+        E max = null;
+
+        //if tree is not null, traverse the tree
+        if(overallRoot != null){
+            max = overallRoot.data;
+
+            Queue<Node<E>> nodes = new LinkedList<>();
+            //add root to the queue
+            nodes.offer(overallRoot);
+
+            while(!nodes.isEmpty()){
+                //remove first element
+                Node<E> currentNode = nodes.poll();
+                //add left and right child to the queue
+                if (currentNode.left != null) {
+                    nodes.offer(currentNode.left);
+                }
+                if (currentNode.right != null) {
+                    nodes.offer(currentNode.right);
+                }
+
+                //compare max and currentNode's data
+                int compare = max.compareTo(currentNode.data);
+                //if max is lesser than current node's data, update max to current node's data
+                if(compare < 0){
+                    max = currentNode.data;
+                }
+
+            }
+
+        }
+
+        return max;
+
     }
 
     //Helper for pre-order traversal

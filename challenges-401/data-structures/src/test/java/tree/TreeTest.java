@@ -152,5 +152,32 @@ public class TreeTest {
 
     }
 
+    /**************************  TEST FINDMAXIMUMVALUE *******************************/
+
+    @Test
+    public void testFindMaxNull(){
+        assertNull("Overall root should be null", testInt.findMaximumValue());
+
+    }
+
+    @Test
+    public void testFindMaxWithOneNode(){
+        Node rootNode = new Node(2);
+        testInt = new Tree<Integer>(rootNode);
+        assertEquals("Value should be the same as root data", Integer.valueOf(2), testInt.findMaximumValue());
+
+    }
+
+    @Test
+    public void testFindMaxWithNodes(){
+        Node left = new Node(1, new Node(6), new Node(7));
+        Node right = new Node(3, new Node(28), new Node(9));
+        Node rootNode = new Node(2, left, right);
+
+        testInt = new Tree<Integer>(rootNode);
+        assertEquals("Value should be the same as root data", Integer.valueOf(28), testInt.findMaximumValue());
+
+    }
+
 
 }
