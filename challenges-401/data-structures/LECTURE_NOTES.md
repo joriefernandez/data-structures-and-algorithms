@@ -9,7 +9,7 @@ Insertion sort is based on the idea that one element from the input elements is 
 
 It iterates the input elements by growing the sorted array at each iteration. It compares the current element with the largest value in the sorted array. If the current element is greater, then it leaves the element in its place and moves on to the next element else it finds its correct position in the sorted array and moves it to that position. This is done by shifting all the elements, which are larger than the current element, in the sorted array to one position ahead.
 
-This sorting algorithm is considered inefficient as you have to loop through the array twice based from time complexity of O(n^2).
+This sorting algorithm is considered inefficient as you have to loop through the array twice based from time complexity of O(n^2) and space complexity of O(1).
 
 ## Diagram
 ![alt insertion_sort](../../challenges-401/assets/insertionsort.png)
