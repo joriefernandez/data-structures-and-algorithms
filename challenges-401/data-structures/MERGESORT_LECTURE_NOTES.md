@@ -77,6 +77,6 @@ ALGORITHM Merge(b, c, a)
 * https://algs4.cs.princeton.edu/22mergesort/
 
 ### Sources
-* [Merge Sort]((./src/main/java/sortingAlgo/MergeSort.java))
-* [Merge Sort Test]((./src/test/java/sortingAlgo/MergeSortTest.java))
+* [Merge Sort](./src/main/java/sortingAlgo/MergeSort.java))
+* [Merge Sort Test](./src/test/java/sortingAlgo/MergeSortTest.java))
 
