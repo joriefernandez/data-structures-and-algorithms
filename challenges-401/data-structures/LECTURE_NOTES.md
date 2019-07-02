@@ -51,6 +51,6 @@ InsertionSort(int[] arr)
 * https://www.geeksforgeeks.org/insertion-sort/
 
 ### Sources
-* [Insertion Sort](./src/main/java/sortingAlgo/InsertionSort.java))
-* [Insertion Sort Test](./src/test/java/sortingAlgo/InsertionSortTest.java))
+* [Insertion Sort](./src/main/java/sortingAlgo/InsertionSort.java)
+* [Insertion Sort Test](./src/test/java/sortingAlgo/InsertionSortTest.java)
 ![alt insertion_sort](../../challenges-401/assets/insertion_key.jpg)
