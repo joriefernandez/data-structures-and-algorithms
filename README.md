@@ -16,5 +16,6 @@
 #### [Insertion Sort](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/data-structures/LECTURE_NOTES.md)
 #### [Merge Sort](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/data-structures/MERGESORT_LECTURE_NOTES.md)
 #### [Quick Sort](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/data-structures/QUICKSORT_LECTURE_NOTES.md)
+#### [Hashtable](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/data-structures/HASHTABLE_README.md)
 
 
