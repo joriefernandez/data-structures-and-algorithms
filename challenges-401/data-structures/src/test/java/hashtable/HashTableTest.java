@@ -96,6 +96,31 @@ public class HashTableTest {
 
     }
 
+    @Test
+    public void addWithCollisionSameHash() {
+
+        String[] keys = new String[ARRAY_SIZE * 2];
+        Integer[] vals = new Integer[ARRAY_SIZE * 2];
+        keys[0] = "First";
+        keys[1] = "Fourth key";
+        keys[2] = "first";
+
+        vals[0] = 2;
+        vals[1] = 24;
+        vals[2] = 24;
+
+        test.add("First", 2);
+        test.add("Fourth key", 24);
+        test.add("first", 24);
+
+        assertEquals("Hash should return the value", 0, test.hash("First"));
+        assertEquals("Hash should return the value", 0, test.hash("first"));
+        assertEquals("key value should be added", Arrays.toString(keys), Arrays.toString(test.keys) );
+        assertEquals("key value should be added", Arrays.toString(vals), Arrays.toString(test.values) );
+        assertEquals("key-value number should be updated", 3, test.keyValueNum);
+
+    }
+
 
     @Test (expected=IllegalArgumentException.class)
     public void addNull() {
@@ -120,6 +145,17 @@ public class HashTableTest {
         test.add("Another key", 24);
         test.add("third", 100);
         assertEquals("Get should return the value",Integer.valueOf(100), test.get("third") );
+    }
+
+    @Test
+    public void getValuesWithSameHash(){
+        test.add("First", 2);
+        test.add("Fourth key", 24);
+        test.add("first", 24);
+
+        assertTrue("Both keys should have the same hash", test.hash("First") == test.hash("first"));
+        assertEquals("Get should return the value",Integer.valueOf(24), test.get("first") );
+
     }
 
     @Test (expected=IllegalArgumentException.class)
@@ -151,6 +187,10 @@ public class HashTableTest {
     @Test
     public void hash() {
         assertEquals("Get should return the value", 3, test.hash("third"));
+        assertEquals("Get should return the value", 0, test.hash("First"));
+        assertEquals("Get should return the value", 1, test.hash("Fourth key"));
+        assertEquals("Get should return the value", 2, test.hash("Another key"));
+        assertEquals("Get should return the value", 0, test.hash("first"));
     }
 
 }
