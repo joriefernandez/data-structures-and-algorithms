@@ -22,4 +22,8 @@ always at most 1 and that entries are stored directly in the cells of the bucket
 2. hash - method to return hashcode of the key. Returns integer value.
 3. contains - checks if the key exist in the table. Parameter is the key and it returns boolean.
 4. get - method that returns corresponding value of the key. Parameter is the key.
+
+## Source Codes
+[HashTable](./src/main/java/hashtable/HashTable.java)
+[HashTable Test](./src/test/java/hashtable/HashTableTest.java)
         
