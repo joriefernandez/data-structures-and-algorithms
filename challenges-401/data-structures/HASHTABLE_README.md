@@ -24,6 +24,6 @@ always at most 1 and that entries are stored directly in the cells of the bucket
 4. get - method that returns corresponding value of the key. Parameter is the key.
 
 ## Source Codes
-[HashTable](./src/main/java/hashtable/HashTable.java)
-[HashTable Test](./src/test/java/hashtable/HashTableTest.java)
+* [HashTable](./src/main/java/hashtable/HashTable.java)
+* [HashTable Test](./src/test/java/hashtable/HashTableTest.java)
         
