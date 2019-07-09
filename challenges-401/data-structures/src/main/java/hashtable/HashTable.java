@@ -8,14 +8,14 @@ package hashtable;
  */
 public class HashTable<Key, Value> {
 
-    private static final int INIT_CAPACITY = 4;
+    private static final int INIT_CAPACITY = 10;
 
     // number of key-value pairs in the symbol table
-    private int keyValueNum;
+    int keyValueNum;
     // size of linear probing table
-    private int size;
-    private Key[] keys;
-    private Value[] vals;
+    int size;
+    Key[] keys;
+    Value[] values;
 
     //Constructor initializes an empty table with initial capacity of 4
     public HashTable() {
@@ -32,7 +32,7 @@ public class HashTable<Key, Value> {
 
         keyValueNum = 0;
         keys = (Key[])   new Object[size];
-        vals = (Value[]) new Object[size];
+        values = (Value[]) new Object[size];
     }
 
 
@@ -42,13 +42,12 @@ public class HashTable<Key, Value> {
      * @param val
      */
     public void add(Key key, Value val){
-        if(key == null){
-            throw new IllegalArgumentException("Invalid null key!");
+        if((key == null) || (val == null)){
+            throw new IllegalArgumentException("Invalid null key-value!");
         }
 
         // TODO: if value is null delete the key
 //        if(val == null)
-
 
         //verify if the load factor is still within allowed percentage
         checkLoadFactor();
@@ -56,13 +55,13 @@ public class HashTable<Key, Value> {
         // Check if the key already exists, if so overwrite value
         for (i = hash(key); keys[i] != null; i = (i + 1) % size) {
             if (keys[i].equals(key)) {
-                vals[i] = val;
+                values[i] = val;
                 return;
             }
         }
         //Add key and value to the table
         keys[i] = key;
-        vals[i] = val;
+        values[i] = val;
         //update key-value number
         keyValueNum++;
     }
@@ -87,7 +86,7 @@ public class HashTable<Key, Value> {
         }
         for (int i = hash(key); keys[i] != null; i = (i + 1) % size) {
             if (keys[i].equals(key)) {
-                return vals[i];
+                return values[i];
             }
         }
         return null;
@@ -122,11 +121,11 @@ public class HashTable<Key, Value> {
         HashTable<Key, Value> temp = new HashTable<Key, Value>(capacity);
         for (int i = 0; i < size; i++) {
             if (keys[i] != null) {
-                temp.add(keys[i], vals[i]);
+                temp.add(keys[i], values[i]);
             }
         }
         keys = temp.keys;
-        vals = temp.vals;
+        values = temp.values;
         size = temp.size;
     }
 
