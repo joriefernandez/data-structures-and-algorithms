@@ -18,5 +18,6 @@
 #### [Quick Sort](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/data-structures/QUICKSORT_LECTURE_NOTES.md)
 #### [Hashtable](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/data-structures/HASHTABLE_README.md)
 #### [Repeated word](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/data-structures/REPEATED_WORD_README.md)
+#### [Tree Intersection](https://github.com/joriefernandez/data-structures-and-algorithms/blob/tree_intersection/challenges-401/data-structures/TREE_INTERSECTION_README.md)
 
 
