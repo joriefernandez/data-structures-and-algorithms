@@ -10,7 +10,7 @@ public class RepeatedWord {
 
         //check if input is not null
         if(input != null) {
-            /
+
             Set<String> words = new HashSet<String>();
             //Split words while disregarding other characters
             String[] splitWords = input.toLowerCase().split("\\W+");
