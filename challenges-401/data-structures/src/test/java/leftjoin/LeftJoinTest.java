@@ -46,7 +46,72 @@ public class LeftJoinTest {
 
     }
 
-    //Helper to check array values from : https://www.baeldung.com/java-compare-hashmaps
+    @Test
+    public void testLeftJoinWithNull(){
+        test = new LeftJoin();
+        first = new HashMap<>();
+        first.put("big", "huge");
+        first.put("calm", "tranquil");
+
+        second = new HashMap<>();
+        second.put("big", "small");
+        second.put("calm", null);
+
+        String[] vals = new String[]{"huge", "small"};
+        expected = new HashMap<String, String[]>();
+        expected.put("big", new String[]{"huge", "small"});
+        expected.put("calm", new String[]{"tranquil", null});
+
+        Map<String, String[]> res = new HashMap<>();
+        res = test.leftJoin(first, second);
+        assertEquals("Keys should be the same", expected.keySet(), res.keySet());
+        assertTrue(areEqualWithArrayValue(expected, res));
+
+
+    }
+
+    @Test
+    public void testLeftJoinWithNullSecondHash(){
+        test = new LeftJoin();
+        first = new HashMap<>();
+        first.put("big", "huge");
+        first.put("calm", "tranquil");
+
+        String[] vals = new String[]{"huge", "small"};
+        expected = new HashMap<String, String[]>();
+        expected.put("big", new String[]{"huge", null});
+        expected.put("calm", new String[]{"tranquil", null});
+
+        Map<String, String[]> res = new HashMap<>();
+        res = test.leftJoin(first, second);
+        assertEquals("Keys should be the same", expected.keySet(), res.keySet());
+        assertTrue(areEqualWithArrayValue(expected, res));
+
+    }
+
+    @Test
+    public void testLeftJoinWithNullFirstHash(){
+        test = new LeftJoin();
+
+        second = new HashMap<>();
+        second.put("big", "small");
+        second.put("calm", null);
+
+
+        String[] vals = new String[]{"huge", "small"};
+        expected = new HashMap<String, String[]>();
+
+        Map<String, String[]> res = new HashMap<>();
+        res = test.leftJoin(null, second);
+        assertEquals("Keys should be the same", expected.keySet(), res.keySet());
+        assertTrue(areEqualWithArrayValue(expected, res));
+
+    }
+
+
+
+
+    //Helper to check array valuesßß∂ from : https://www.baeldung.com/java-compare-hashmaps
     private boolean areEqualWithArrayValue(Map<String, String[]> first, Map<String, String[]> second) {
         if (first.size() != second.size()) {
             return false;

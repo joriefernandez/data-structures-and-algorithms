@@ -9,18 +9,20 @@ public class LeftJoin {
 
     public Map<String, String[]> leftJoin(HashMap<String, String> firstMap,
                                                       HashMap<String, String> secondMap){
+        if(firstMap != null) {
+            putMap(firstMap);
 
-        putMap(firstMap);
-
-        secondMap.forEach((key, value) -> {
-            String curKey = key.toLowerCase();
-            if(result.containsKey(curKey)){
-                String[] values = result.get(curKey);
-                values[1] = value.toLowerCase();
-                result.put(key, values);
-            }
-        });
-
+            secondMap.forEach((key, value) -> {
+                String curKey = key.toLowerCase();
+                if (result.containsKey(curKey)) {
+                    String[] values = result.get(curKey);
+                    if (value != null) {
+                        values[1] = value.toLowerCase();
+                    }
+                    result.put(key, values);
+                }
+            });
+        }
         return result;
 
 
