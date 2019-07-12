@@ -1,11 +1,10 @@
 # Challenge Summary
-Find the first repeated word in a book.
+Left join synonym and antonyms hashmap.
 
 ## Challenge Description
-Implement a method, given a string, returns the first word that occurs more than once in the string.
-
+Implement a method, given two hashmaps, returns the new left joined map.
 ## Approach & Efficiency
-The solution has a time and space complexities of O(n) since we are using array to split and iterate through the array to check if the word exists in the HashSet.The method excludes non-alphabet characters.
+The solution has a time and space complexities of O(n) since we are using iterating through the hashmap and add it to the resulting hashmap.The method returns null if first hashmap is null.
 
 ## Solution
 * [LeftJoin](./src/main/java/leftjoin/LeftJoin.java)
