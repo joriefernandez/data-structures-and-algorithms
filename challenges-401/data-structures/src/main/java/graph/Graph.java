@@ -3,56 +3,27 @@ package graph;
 
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 public class Graph<E> {
 
-    private HashMap<Node<E>, HashSet<Node<E>>> nodes;
+    HashMap<Node<E>, HashSet<Node<E>>> nodes;
 
     public Graph(){
         this.nodes = new HashMap<>();
     }
 
-    class Node<E> {
-        E data;
-        HashSet<Edge> edges;
-
-        public Node (E data){
-            this.data = data;
-            this.edges = new HashSet<>();
-        }
-
-    }
-
-    class Edge<E>{
-
-        Node<E> start;
-        Node<E> end;
-        int cost;
-
-        public Edge (Node<E> start, Node<E> end){
-            this.start = start;
-            this.end = end;
-            this.cost = 0;
-        }
-
-        public Edge (Node<E> start, Node<E> end, int cost){
-            this.start = start;
-            this.end = end;
-            this.cost = cost;
-        }
-
-    }
 
     /**
      * Method to add node to the graph
      * @param value of the node
      */
-    public void addNode(E value){
+    public Node<E> addNode(E value){
+        Node<E> newNode = new Node<>(value);
         if(value != null){
-            nodes.putIfAbsent(new Node<E>(value), new HashSet<>());
+            nodes.putIfAbsent(newNode, new HashSet<>());
         }
+        return newNode;
     }
 
     /**
@@ -61,11 +32,14 @@ public class Graph<E> {
      * @param dest end node
      * @param cost weight associated to the edge
      */
-    public void addEdge(Node<E> src, Node<E> dest, int cost){
+    public void addEdge(Node src, Node dest, int cost){
         if(nodes.containsKey(src) && nodes.containsKey(dest)){
-            Edge<E> newEdge = new Edge<>(src, dest, cost);
-            src.edges.add(newEdge);
+            Edge newEdge = new Edge(src, dest, cost);
+            nodes.get(src).add(dest);
+            src.addNodeEdge(newEdge);
+
         }
+
     }
 
     /**
