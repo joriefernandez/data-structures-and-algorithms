@@ -72,7 +72,8 @@ public class GraphTest {
         Node<String> another = test.addNode("B");
         test.addEdge(newNode, another, 3);
 
-        assertEquals("Size of the edges on the source node should be updated", 1, newNode.edges);
+
+        assertEquals("Size of the edges on the source node should be updated", 1, newNode.edges.size());
 
     }
 
