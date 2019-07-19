@@ -36,6 +36,11 @@ To create the Graph, a Node and an Edge class are created. The graph then has a 
 - Time O(n^2) since looping through queue and set of neighbors
 - Space O(n) from using list
 
+7. DepthFirst()
+- Time O(n^2) since looping through queue and set of neighbors
+- Space O(n) from using list
+
+
 
 ## API
 1. AddNode()
@@ -63,8 +68,13 @@ To create the Graph, a Node and an Edge class are created. The graph then has a 
 6. BreadthFirst()
 - returns list based from breadth-first traversal
 
+7. DepthFirst()
+- returns list based from depth-first traversal
+
 ## Source Codes
 * [Graph classes](./src/main/java/graph/Graph.java)
 * [Graph Test](./src/test/java/graph/GraphTest.java)
 * BreadthFirst
 ![alt bfs](../../challenges-401/assets/bfs.jpg)
+* DepthFirst
+![alt depthfirst](../../challenges-401/assets/depthfirst.jpg)
