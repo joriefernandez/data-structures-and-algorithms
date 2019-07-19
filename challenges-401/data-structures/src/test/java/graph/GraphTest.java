@@ -4,8 +4,10 @@ import org.junit.Before;
 import org.junit.Test;
 
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -101,5 +103,48 @@ public class GraphTest {
     public void graphConstructor() {
         test = new Graph();
         assertEquals(new HashMap<>(), test.nodes);
+    }
+
+
+    /****************************** BFS TEST ****************************************/
+
+    @Test (expected = IllegalArgumentException.class)
+    public void testBFSNullNode(){
+        test = new Graph();
+        test.breadthFirst(null);
+    }
+
+    @Test (expected = IllegalArgumentException.class)
+    public void testBFSNodeNotInGraph(){
+        test = new Graph();
+        Node<String> newNode = test.addNode("A");
+        test.breadthFirst(new Node("B"));
+    }
+
+    @Test
+    public void testBFSOneNeighbor(){
+        test = new Graph();
+        Node<String> newNode = test.addNode("A");
+        Node<String> another = test.addNode("B");
+        test.addEdge(newNode, another, 3);
+        List<String> expected = new ArrayList<>();
+        expected.add("A");
+        expected.add("B");
+        assertEquals("Should return the correct path", expected.toString(), test.breadthFirst(newNode).toString());
+    }
+
+    @Test
+    public void testBFSNeighbors(){
+        test = new Graph();
+        Node<String> newNode = test.addNode("A");
+        Node<String> another = test.addNode("B");
+        Node<String> cNode = test.addNode("C");
+        test.addEdge(newNode, another, 3);
+        test.addEdge(another, cNode,20);
+        List<String> expected = new ArrayList<>();
+        expected.add("A");
+        expected.add("B");
+        expected.add("C");
+        assertEquals("Should return the correct path", expected.toString(), test.breadthFirst(newNode).toString());
     }
 }

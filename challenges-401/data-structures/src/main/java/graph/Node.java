@@ -14,4 +14,8 @@ public class Node<E> {
     public void addNodeEdge(Edge edge){
         edges.add(edge);
     }
+
+    public String toString(){
+        return data.toString();
+    }
 }
