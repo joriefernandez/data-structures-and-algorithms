@@ -23,4 +23,6 @@
 #### [Graph](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/data-structures/GRAPH_README.md)
 #### [Breadth-First](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/data-structures/GRAPH_README.md)
 
+#### [Depth-First](https://github.com/joriefernandez/data-structures-and-algorithms/blob/master/challenges-401/data-structures/GRAPH_README.md)
+
 
