@@ -1,9 +1,7 @@
 package graph;
 
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Graph<E> {
 
@@ -70,9 +68,57 @@ public class Graph<E> {
     }
 
 
+    /**
+     * Method for breadth-first traversal
+     * @param start starting node
+     * @return path from the starting node
+     */
+    public List<Node<E>> breadthFirst(Node<E> start){
 
+        //set that will contain visited nodes
+        HashSet<Node<E>> visited = new HashSet<>();
 
+        // resulting nodes
+        List<Node<E>> result = new ArrayList<>();
 
+        //queue for traversal
+        Queue<Node<E>> nodeList = new LinkedList<>();
+        //check if the node exists in the graph
+
+        if(start == null){
+            throw new IllegalArgumentException("Node cannot be null");
+        }
+
+        if(nodes.containsKey(start)){
+            nodeList.add(start);
+            visited.add(start);
+            result.add(start);
+        } else{
+            throw new IllegalArgumentException("Node is not in the graph");
+        }
+
+        //traverse through the queue
+        while(!nodeList.isEmpty()){
+            Node<E> curNode = nodeList.poll();
+
+            //check if the node has been visited, if not add to the result
+            if(!visited.contains(curNode)){
+                result.add(curNode);
+            }
+
+            //add the node to visited
+            visited.add(curNode);
+            //get all the neighbors of the node and add to the queue
+            nodes.get(curNode).forEach( neighbor -> {
+                if(!visited.contains(neighbor)) {
+                    nodeList.add(neighbor);
+                }
+            });
+
+        }
+
+        return result;
+    }
 
 }
 

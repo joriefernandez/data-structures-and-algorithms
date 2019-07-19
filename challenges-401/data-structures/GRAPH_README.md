@@ -13,6 +13,7 @@ Implement graph data structures with the following methods:
 3. GetNodes()
 4. GetNeighbors()
 5. Size()
+6. BreadthFirst()
 
 ## Approach & Efficiency
 To create the Graph, a Node and an Edge class are created. The graph then has a property of nodes that uses a HashMap data structure.
@@ -30,6 +31,10 @@ To create the Graph, a Node and an Edge class are created. The graph then has a 
 
 5.Size()
 - Time 0(n) and space complexities: O(1)
+
+6. BreadthFirst()
+- Time O(n^2) since looping through queue and set of neighbors
+- Space O(n) from using list
 
 
 ## API
@@ -55,6 +60,11 @@ To create the Graph, a Node and an Edge class are created. The graph then has a 
 5.Size()
 - Returns the total number of nodes in the graph
 
+6. BreadthFirst()
+- returns list based from breadth-first traversal
+
 ## Source Codes
 * [Graph classes](./src/main/java/graph/Graph.java)
 * [Graph Test](./src/test/java/graph/GraphTest.java)
+* BreadthFirst
+![alt bfs](../../challenges-401/assets/bfs.jpg)
