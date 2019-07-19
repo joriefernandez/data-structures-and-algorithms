@@ -134,7 +134,7 @@ public class Graph<E> {
         // resulting nodes
         List<Node<E>> result = new ArrayList<>();
 
-        //queue for traversal
+        //stack for traversal
         Stack<Node<E>> nodeList = new Stack<>();
         //check if the node exists in the graph
 
@@ -161,7 +161,7 @@ public class Graph<E> {
 
             //add the node to visited
             visited.add(curNode);
-            //get all the neighbors of the node and add to the queue
+            //get all the neighbors of the node and add to the stack
             nodes.get(curNode).forEach( neighbor -> {
                 if(!visited.contains(neighbor)) {
                     nodeList.push(neighbor);

@@ -76,3 +76,5 @@ To create the Graph, a Node and an Edge class are created. The graph then has a 
 * [Graph Test](./src/test/java/graph/GraphTest.java)
 * BreadthFirst
 ![alt bfs](../../challenges-401/assets/bfs.jpg)
+* DepthFirst
+![alt depthfirst](../../challenges-401/assets/depthfirst.jpg)
