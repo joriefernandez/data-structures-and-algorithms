@@ -147,4 +147,33 @@ public class GraphTest {
         expected.add("C");
         assertEquals("Should return the correct path", expected.toString(), test.breadthFirst(newNode).toString());
     }
+
+    @Test
+    public void testBFSNeighborsExample(){
+        test = new Graph();
+        Node<String> a = test.addNode("Pandora");
+        Node<String> b = test.addNode("Arendelle");
+        Node<String> c = test.addNode("Metroville");
+        Node<String> d = test.addNode("Monstropolis");
+        Node<String> e = test.addNode("Narnia");
+        Node<String> f = test.addNode("Naboo");
+        test.addEdge(a, b, 2);
+        test.addEdge(b, c,2);
+        test.addEdge(b, d,2);
+        test.addEdge(c, e,2);
+        test.addEdge(c, f,2);
+        test.addEdge(c, d,2);
+        test.addEdge(c, f,2);
+        test.addEdge(d, b,2);
+        test.addEdge(d, f,2);
+        test.addEdge(d, c,2);
+        List<String> expected = new ArrayList<>();
+        expected.add("Pandora");
+        expected.add("Arendelle");
+        expected.add("Metroville");
+        expected.add("Monstropolis");
+        expected.add("Narnia");
+        expected.add("Naboo");
+        assertEquals("Should return the correct path", expected.toString(), test.breadthFirst(a).toString());
+    }
 }
