@@ -36,6 +36,11 @@ public class Graph<E> {
             nodes.get(src).add(dest);
             src.addNodeEdge(newEdge);
 
+            Edge otherEdge = new Edge(dest, src, cost);
+            nodes.get(dest).add(src);
+            dest.addNodeEdge(otherEdge);
+
+
         }
 
     }
@@ -173,6 +178,15 @@ public class Graph<E> {
         return result;
     }
 
+    //get node based from value
+    public Node<E> getPresentNode(E data){
+        for(Node<E> node: nodes.keySet()){
+            if(node.data.equals(data)){
+                return node;
+            }
+        }
+        return null;
+    }
 
 }
 
