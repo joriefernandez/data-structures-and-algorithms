@@ -15,6 +15,19 @@ public class Node<E> {
         edges.add(edge);
     }
 
+    public HashSet<Edge> getEdges(){
+        return this.edges;
+    }
+
+    public int getCost(Node<E> to){
+        for(Edge ed: this.edges){
+            if(ed.end.data.equals(to.data)){
+                return ed.cost;
+            }
+        }
+        return 0;
+    }
+
     public String toString(){
         return data.toString();
     }
