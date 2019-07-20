@@ -7,6 +7,7 @@ import java.util.Set;
 
 public class GetEdge {
 
+    //Class that will contain values if there is a direct path and the total cost
     public static class DirectPath{
         boolean isTrue;
         int  cost;
